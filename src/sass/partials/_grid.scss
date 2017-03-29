@@ -29,7 +29,8 @@
 .row,
 [class*="block-row-"] {
     margin: 0 (-$grid-column-gutter/2); // 1
-    @extend .clearfix;
+    // @extend .clearfix;
+    display: flex;
 }
 
 // No margin required.
@@ -38,27 +39,28 @@
 }
 
 // Block-row
-[class*="block-row-"] {
-    display: block;
-    padding: 0;
-    list-style: none;
-}
+// [class*="block-row-"] {
+//     display: block;
+//     padding: 0;
+//     list-style: none;
+// }
 
 // Columns
 // 1: Use transparent borders for padding.
 // 2: Clip to allow setting a background color without filling the whole area.
 [class*=col-],
 [class*="block-row-"] > * {
-    display: block;
-    float: left;
-    min-height: 1px;
-    width: 100%;
-    border-left: ($grid-column-gutter/2) solid transparent; // 1
-    border-right: ($grid-column-gutter/2) solid transparent; // 1
-    background-clip: padding-box; // 2
-    [dir="rtl"] & {
-        float: right;
-    }
+    // display: block;
+    // float: left;
+    // min-height: 1px;
+    // width: 100%;
+    // border-left: ($grid-column-gutter/2) solid transparent; // 1
+    // border-right: ($grid-column-gutter/2) solid transparent; // 1
+    // background-clip: padding-box; // 2
+    // [dir="rtl"] & {
+    //     float: right;
+    // }
+    margin: 0 ($grid-column-gutter/2);
 }
 
 // Movable columns
@@ -73,8 +75,9 @@
 // 1: Remove gutter
 [class*="block-row-"].no-gutter > *,
 .no-gutter > [class*=col-] {
-    border: none; // 1
-    background-clip: border-box; // 1
+    // border: none; // 1
+    // background-clip: border-box; // 1
+    margin: 0;
 }
 
 // Equal height

@@ -11,41 +11,42 @@
         $temp-width: $column-width * $i;
 
         .col-#{$breakpoint}-#{$i} {
-            width: $temp-width;
+            // width: $temp-width;
+            flex: 0 0 $temp-width;
         }
         // We don't want add offsets etc to full width columns.
         @if $i < $max-columns {
             // Keep offset for now for backwards compatibility.
-            .offset-#{$breakpoint}-#{$i},
-            .push-#{$breakpoint}-#{$i} {
-                left: $temp-width;
+            // .offset-#{$breakpoint}-#{$i},
+            // .push-#{$breakpoint}-#{$i} {
+            //     left: $temp-width;
 
-                [dir="rtl"] & {
-                    left: auto;
-                    right: $temp-width;
-                }
-            }
+            //     [dir="rtl"] & {
+            //         left: auto;
+            //         right: $temp-width;
+            //     }
+            // }
 
-            .pull-#{$breakpoint}-#{$i} {
-                right: $temp-width;
+            // .pull-#{$breakpoint}-#{$i} {
+            //     right: $temp-width;
 
-                [dir="rtl"] & {
-                    right: auto;
-                    left: $temp-width;
-                }
-            }
+            //     [dir="rtl"] & {
+            //         right: auto;
+            //         left: $temp-width;
+            //     }
+            // }
         }
     }
     // Equal height
-    .equal-height > [class*=col-#{$breakpoint}] {
-        display: table-cell;
-        height: 100%;
-    }
+    // .equal-height > [class*=col-#{$breakpoint}] {
+    //     display: table-cell;
+    //     height: 100%;
+    // }
 
-    .equal-height > .col-#{$breakpoint}-#{$grid-column-count} {
-        display: table-caption;
-		height: auto;
-    }
+    // .equal-height > .col-#{$breakpoint}-#{$grid-column-count} {
+    //     display: table-caption;
+	// 	height: auto;
+    // }
 }
 
 //==
