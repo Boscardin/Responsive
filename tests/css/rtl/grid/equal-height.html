@@ -10,7 +10,7 @@
     <link href="../../../../build/responsive.css" rel="stylesheet" />
     <link href="../../test-assets/css/tests.css" rel="stylesheet" />
 </head>
-<body class="grid-test">
+<body class="grid-test equalheight">
     <article class="container grid-test">
         <div>
             <p class="clearfix"><a class="push" href="../../index.html">Back to Index</a></p>
@@ -19,10 +19,10 @@
         <hr />
         <h3>Equal Height Columns</h3>
         <p>
-            Add class <code>.equal-height</code> to the row.
+            Flexbox automatically equalizes heights.
         </p>
         <h2>Standard</h2>
-        <div class="row equal-height">
+        <div class="row">
             <div class="col-s-3">
                 <p>
                     Dejah Thoris related many interesting facts and legends concerning this lost race of noble
@@ -41,7 +41,7 @@
                 </p>
             </div>
         </div>
-        <div class="row equal-height">
+        <div class="row">
             <div class="col-s-6">
                 <p>
                     Dejah Thoris related many interesting facts and legends concerning this lost race of noble
@@ -62,42 +62,38 @@
         </div>
         <h2>Standard Push</h2>
 
-        <div class="alert" role="alert">
-            <h4>Style Issue</h4>
-            <p>The following style behaviour fails with Firefox current release v36.04 but works with Firefox Developer edition v38.0a2.</p>
-        </div>
-        <div class="row equal-height">
+        <div class="row">
             <div class="col-s-3 push-s-3">3</div>
             <div class="col-s-3 push-s-6">
                 <img src="../../test-assets/img/768x400.jpg" />
             </div>
         </div>
-        <div class="row equal-height">
+        <div class="row">
             <div class="col-s-3">3 </div>
             <div class="col-s-3 push-s-3">
                 <img src="../../test-assets/img/768x400.jpg" />
             </div>
         </div>
-        <h2>No Gutter Offset</h2>
-        <div class="row no-gutter equal-height">
-            <div class="col-s-3 offset-s-3">3 </div>
-            <div class="col-s-3 offset-s-6">
+        <h2>No Gutter Pull</h2>
+        <div class="row no-gutter">
+            <div class="col-s-3 push-s-6">3 </div>
+            <div class="col-s-3 pull-s-3">
                 <img src="../../test-assets/img/768x400.jpg" />
             </div>
         </div>
-        <div class="row no-gutter equal-height">
-            <div class="col-s-3">3 </div>
-            <div class="col-s-3 offset-s-3">
+        <div class="row no-gutter">
+            <div class="col-s-3 push-s-9">3 </div>
+            <div class="col-s-3">
                 <img src="../../test-assets/img/768x400.jpg" />
             </div>
         </div>
 
         <h2>No Gutter Push</h2>
-        <div class="row no-gutter equal-height">
+        <div class="row no-gutter">
             <div class="col-s-3 push-s-3">3 </div>
             <div class="col-s-3 push-s-6"><img src="../../test-assets/img/768x400.jpg" /></div>
         </div>
-        <div class="row no-gutter equal-height">
+        <div class="row no-gutter">
             <div class="col-s-3">3 </div>
             <div class="col-s-3 push-s-3"><img src="../../test-assets/img/768x400.jpg" /></div>
         </div>
